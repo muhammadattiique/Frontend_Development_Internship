@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Day 2 Task</title>
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <header>
+      <h1>Form Handling And Error Messages</h1>
+    </header>
+
+    <main>
+      <!-- =========================
+           TASK FORM
+      ========================== -->
+      <div class="container">
+        <form class="myForm" id="taskForm">
+          <!-- Task Title -->
+          <div class="form-group">
+            <label for="title">Title</label>
+
+            <input
+              type="text"
+              id="title"
+              name="title"
+              placeholder="Enter Task Title"
+              aria-describedby="titleError"
+              aria-invalid="false"
+            />
+
+            <p id="titleError" class="error-message" role="alert" hidden></p>
+          </div>
+
+          <!-- Priority -->
+          <div class="form-group">
+            <label for="priority">Priority</label>
+
+            <select
+              id="priority"
+              name="priority"
+              aria-describedby="priorityError"
+              aria-invalid="false"
+            >
+              <option value="">Select Priority</option>
+              <option value="low">Low</option>
+              <option value="medium">Medium</option>
+              <option value="high">High</option>
+            </select>
+
+            <p id="priorityError" class="error-message" role="alert" hidden></p>
+          </div>
+
+          <!-- Due Date -->
+          <div class="form-group">
+            <label for="date">Due Date</label>
+
+            <input
+              type="date"
+              id="date"
+              name="dueDate"
+              aria-describedby="dateError"
+              aria-invalid="false"
+            />
+
+            <p id="dateError" class="error-message" role="alert" hidden></p>
+          </div>
+
+          <!-- Submit Button -->
+          <button type="submit" id="submitBtn">Submit</button>
+        </form>
+      </div>
+
+      <!-- =========================
+           SUCCESS MESSAGE
+      ========================== -->
+      <p id="success" class="success-message" role="status" hidden></p>
+
+      <!-- =========================
+           TASK TABLE
+      ========================== -->
+      <table id="table" class="task-table" hidden>
+        <caption>
+          Submitted Tasks
+        </caption>
+
+        <thead>
+          <tr>
+            <th scope="col">Task Title</th>
+            <th scope="col">Priority</th>
+            <th scope="col">Due Date</th>
+          </tr>
+        </thead>
+
+        <tbody id="tableBody"></tbody>
+      </table>
+    </main>
+
+    <script src="index.js"></script>
+  </body>
+</html>

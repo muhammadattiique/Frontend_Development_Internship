@@ -1,0 +1,219 @@
+/* Reset default browser spacing */
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #061214; /* Deep dark slate with emerald undertone */
+  color: #e2e8f0;
+  font-family:
+    system-ui,
+    -apple-system,
+    sans-serif;
+}
+
+header {
+  margin: 0;
+  padding: 0;
+}
+
+#nav ul {
+  background-color: #0f2326; /* Dark emerald card surface */
+  margin: 0;
+  padding: 0 2rem;
+  display: flex;
+  justify-content: space-evenly;
+  height: 90px;
+  align-items: center;
+  list-style: none;
+  border-bottom: 1px solid #16383c;
+}
+
+#nav ul li a {
+  text-decoration: none;
+  color: #10b981; /* Emerald green accent */
+  font-size: 1.2rem;
+  font-weight: bold;
+  transition: color 0.2s ease;
+}
+
+#nav ul li a:hover {
+  color: #34d399;
+}
+
+#main-content {
+  padding: 3rem 2rem;
+  max-width: 1400px;
+  margin-top: 70px;
+  margin-left: 180px;
+  margin-right: 30px;
+  margin-bottom: 70px;
+}
+
+.hero-section {
+  text-align: center;
+  margin-bottom: 3rem;
+  background-color: #0f2326;
+  padding: 2.5rem;
+  border-radius: 12px;
+  border: 1px solid #16383c;
+}
+
+.hero-section h2 {
+  color: #10b981;
+  font-size: 2.5rem;
+  margin-top: 0;
+}
+
+.hero-section p {
+  color: #94a3b8;
+  font-size: 1.2rem;
+}
+
+.skills-section h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  color: #e2e8f0;
+}
+
+/* ==========================================
+   12-COLUMN GRID SYSTEM WITH FLEXBOX FALLBACK
+   ========================================== */
+
+/* 1. Flexbox Fallback (For older browsers) */
+.grid-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.col {
+  flex: 1 1 100%;
+}
+
+/* 2. Modern 12-Column CSS Grid */
+@supports (display: grid) {
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    gap: 1.5rem;
+  }
+
+  .col {
+    width: auto;
+    flex: unset;
+  }
+
+  .col.span-4 {
+    grid-column: span 4;
+  }
+}
+
+/* ==========================================
+   RESPONSIVE BREAKPOINTS (576px / 768px / 1024px)
+   ========================================== */
+
+/* Mobile Breakpoint: Up to 576px */
+@media (max-width: 576px) {
+  .grid-container {
+    display: flex;
+    flex-direction: column;
+  }
+  .col {
+    flex: 1 1 100%;
+  }
+}
+
+/* Tablet Breakpoint: 576px to 768px */
+@media (min-width: 576px) and (max-width: 768px) {
+  @supports (display: grid) {
+    .col.span-4 {
+      grid-column: span 6;
+    }
+  }
+}
+
+/* Laptop Breakpoint: 768px to 1024px */
+@media (min-width: 768px) and (max-width: 1024px) {
+  @supports (display: grid) {
+    .col.span-4 {
+      grid-column: span 6;
+    }
+  }
+}
+
+/* Desktop Breakpoint: 1024px and above */
+@media (min-width: 1024px) {
+  @supports (display: grid) {
+    .col.span-4 {
+      grid-column: span 4;
+    }
+  }
+}
+
+/* Card Styling */
+.skill-card {
+  background-color: #0f2326;
+  padding: 1.5rem;
+  border-radius: 8px;
+  border: 1px solid #16383c;
+  height: 100%;
+  box-sizing: border-box;
+  transition:
+    transform 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.skill-card:hover {
+  transform: translateY(-4px);
+  border-color: #10b981;
+}
+
+.skill-card h4 {
+  color: #10b981;
+  margin-top: 0;
+  font-size: 1.3rem;
+}
+
+.skill-card p {
+  color: #94a3b8;
+  font-size: 1.1rem;
+  line-height: 1.5;
+  margin-bottom: 0;
+}
+
+#site-footer {
+  background-color: #0f2326;
+  border-top: 1px solid #16383c;
+  padding: 1.5rem 2rem;
+  margin-top: 16rem;
+}
+
+.footer-content {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#site-footer p {
+  margin: 0;
+  color: #94a3b8;
+}
+
+.footer-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+  margin: 0;
+  padding: 0;
+}
+
+.footer-links a {
+  color: #10b981;
+  text-decoration: none;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}

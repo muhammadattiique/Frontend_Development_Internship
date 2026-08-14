@@ -1,0 +1,266 @@
+/* =========================
+   GLOBAL STYLES
+========================= */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f5f5f5;
+  color: #222;
+}
+
+/* =========================
+   HEADER
+========================= */
+
+header {
+  padding: 20px;
+}
+
+header h1 {
+  text-align: center;
+  margin: 0;
+}
+
+/* =========================
+   FORM CONTAINER
+========================= */
+
+.container {
+  width: 50vw;
+  min-height: 70vh;
+
+  margin: 5vh auto 0;
+  padding: 40px;
+
+  border: 2px solid black;
+  border-radius: 30px;
+
+  background-color: white;
+}
+
+/* =========================
+   FORM
+========================= */
+
+.myForm {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* =========================
+   FORM GROUP
+========================= */
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+
+  margin-bottom: 15px;
+}
+
+/* =========================
+   LABEL
+========================= */
+
+label {
+  margin-bottom: 8px;
+
+  font-weight: bold;
+}
+
+/* =========================
+   INPUT & SELECT
+========================= */
+
+input,
+select {
+  width: 100%;
+  padding: 12px;
+
+  font-size: 16px;
+
+  border: 1px solid #777;
+  border-radius: 6px;
+
+  background-color: white;
+}
+
+/* =========================
+   INPUT FOCUS
+========================= */
+
+input:focus,
+select:focus {
+  outline: 3px solid #bcdcff;
+  border-color: #0066cc;
+}
+
+/* =========================
+   INVALID INPUT
+========================= */
+
+input[aria-invalid='true'],
+select[aria-invalid='true'] {
+  border: 2px solid #b00020;
+}
+
+/* =========================
+   ERROR MESSAGE
+========================= */
+
+.error-message {
+  margin: 5px 0 0;
+
+  font-size: 14px;
+  font-weight: bold;
+
+  color: #b00020;
+}
+
+/* =========================
+   SUBMIT BUTTON
+========================= */
+
+button {
+  width: 100%;
+  padding: 12px;
+
+  font-size: 16px;
+  font-weight: bold;
+
+  border: none;
+  border-radius: 6px;
+
+  cursor: pointer;
+}
+
+/* =========================
+   BUTTON HOVER
+========================= */
+
+button:hover {
+  opacity: 0.85;
+}
+
+/* =========================
+   BUTTON FOCUS
+========================= */
+
+button:focus {
+  outline: 3px solid #bcdcff;
+}
+
+/* =========================
+   SUCCESS MESSAGE
+========================= */
+
+.success-message {
+  width: 50vw;
+
+  margin: 20px auto 0;
+  padding: 12px;
+
+  text-align: center;
+
+  font-weight: bold;
+
+  border: 1px solid #198754;
+  border-radius: 6px;
+
+  background-color: #e8f5e9;
+  color: #198754;
+}
+
+/* =========================
+   TASK TABLE
+========================= */
+
+.task-table {
+  width: 50vw;
+
+  margin: 20px auto;
+
+  border-collapse: collapse;
+
+  background-color: white;
+}
+
+/* =========================
+   TABLE CAPTION
+========================= */
+
+.task-table caption {
+  margin-bottom: 10px;
+
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/* =========================
+   TABLE HEADER & CELLS
+========================= */
+
+.task-table th,
+.task-table td {
+  padding: 12px;
+
+  text-align: left;
+
+  border: 1px solid #777;
+}
+
+/* =========================
+   TABLE HEADER
+========================= */
+
+.task-table th {
+  font-weight: bold;
+  background-color: #eeeeee;
+}
+
+/* =========================
+   TABLE ROW HOVER
+========================= */
+
+.task-table tbody tr:hover {
+  background-color: #f5f5f5;
+}
+
+/* =========================
+   MOBILE RESPONSIVE
+========================= */
+
+@media (max-width: 768px) {
+  .container {
+    width: 90vw;
+
+    padding: 25px;
+
+    margin-top: 3vh;
+  }
+
+  .success-message {
+    width: 90vw;
+  }
+
+  .task-table {
+    width: 90vw;
+
+    font-size: 14px;
+  }
+
+  .task-table th,
+  .task-table td {
+    padding: 8px;
+  }
+
+  header h1 {
+    font-size: 24px;
+  }
+}

@@ -1,0 +1,147 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+
+  font-family: Arial, sans-serif;
+
+  background-color: #f5f5f5;
+}
+
+/* -------------------------
+   HEADER
+------------------------- */
+
+header {
+  padding: 30px;
+
+  text-align: center;
+}
+
+header h1 {
+  margin: 0;
+}
+
+/* -------------------------
+   MAIN CONTAINER
+------------------------- */
+
+.container {
+  width: 80%;
+
+  margin: 30px auto;
+
+  padding: 30px;
+
+  background-color: white;
+
+  border: 2px solid black;
+
+  border-radius: 15px;
+}
+
+/* -------------------------
+   BUTTON
+------------------------- */
+
+button {
+  padding: 12px 20px;
+
+  font-size: 16px;
+
+  font-weight: bold;
+
+  border: none;
+
+  border-radius: 6px;
+
+  cursor: pointer;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+button:focus {
+  outline: 3px solid #bcdcff;
+}
+
+/* -------------------------
+   STATE MESSAGES
+------------------------- */
+
+.state-message {
+  margin-top: 20px;
+
+  font-weight: bold;
+}
+
+/* -------------------------
+   ERROR MESSAGE
+------------------------- */
+
+.error-message {
+  margin-top: 20px;
+
+  color: #b00020;
+
+  font-weight: bold;
+}
+
+/* -------------------------
+   SUCCESS MESSAGE
+------------------------- */
+
+.success-message {
+  margin-top: 20px;
+
+  font-weight: bold;
+}
+
+/* -------------------------
+   TABLE
+------------------------- */
+
+table {
+  width: 100%;
+
+  margin-top: 25px;
+
+  border-collapse: collapse;
+}
+
+th,
+td {
+  padding: 12px;
+
+  border: 1px solid #777;
+
+  text-align: left;
+}
+
+th {
+  font-weight: bold;
+}
+
+/* -------------------------
+   RESPONSIVE
+------------------------- */
+
+@media (max-width: 700px) {
+  .container {
+    width: 95%;
+
+    padding: 20px;
+  }
+
+  table {
+    font-size: 14px;
+  }
+
+  th,
+  td {
+    padding: 8px;
+  }
+}

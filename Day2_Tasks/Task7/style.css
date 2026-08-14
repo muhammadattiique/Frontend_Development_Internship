@@ -1,0 +1,431 @@
+/* =====================================================
+   GENERAL PAGE
+===================================================== */
+
+body {
+  margin: 0;
+  padding: 30px;
+
+  background: #f4f7fb;
+
+  font-family: Arial, sans-serif;
+
+  color: #333;
+}
+
+/* =====================================================
+   HEADING
+===================================================== */
+
+h1 {
+  text-align: center;
+
+  color: #222;
+
+  font-size: 36px;
+
+  margin-bottom: 35px;
+}
+
+/* =====================================================
+   FORM
+===================================================== */
+
+#myForm {
+  width: 500px;
+
+  max-width: 90%;
+
+  margin: 0 auto 40px;
+
+  padding: 25px;
+
+  background: white;
+
+  border-radius: 12px;
+
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+
+  box-sizing: border-box;
+}
+
+/* =====================================================
+   FORM LABELS
+===================================================== */
+
+#myForm > label {
+  display: block;
+
+  margin-top: 12px;
+
+  font-size: 16px;
+
+  font-weight: bold;
+}
+
+/* =====================================================
+   TEXT AND NUMBER INPUTS
+===================================================== */
+
+#myForm input[type='text'],
+#myForm input[type='number'] {
+  width: 100%;
+
+  height: 45px;
+
+  box-sizing: border-box;
+
+  margin-top: 8px;
+
+  margin-bottom: 15px;
+
+  padding: 10px 12px;
+
+  border: 1px solid #ccc;
+
+  border-radius: 8px;
+
+  font-family: Arial, sans-serif;
+
+  font-size: 16px;
+
+  outline: none;
+
+  transition: 0.2s;
+}
+
+/* =====================================================
+   INPUT FOCUS
+===================================================== */
+
+#myForm input[type='text']:focus,
+#myForm input[type='number']:focus {
+  border-color: #4caf50;
+
+  box-shadow: 0 0 5px rgba(76, 175, 80, 0.3);
+}
+
+/* =====================================================
+   GENDER
+===================================================== */
+
+#gender {
+  width: 100%;
+
+  height: 45px;
+
+  margin-top: 8px;
+
+  margin-bottom: 15px;
+
+  padding: 8px 12px;
+
+  border: 1px solid #ccc;
+
+  border-radius: 8px;
+
+  font-size: 16px;
+
+  background-color: white;
+
+  outline: none;
+
+  cursor: pointer;
+
+  box-sizing: border-box;
+}
+
+#gender:focus {
+  border-color: #4caf50;
+
+  box-shadow: 0 0 5px rgba(76, 175, 80, 0.3);
+}
+
+/* =====================================================
+   STATUS
+===================================================== */
+
+.status-group {
+  margin-top: 15px;
+
+  margin-bottom: 20px;
+}
+
+.status-group > label {
+  font-size: 16px;
+
+  font-weight: bold;
+}
+
+/* Passed / Failed */
+
+.status-options {
+  display: flex;
+
+  align-items: center;
+
+  gap: 25px;
+
+  margin-top: 10px;
+}
+
+/* Individual radio option */
+
+.status-options label {
+  display: flex;
+
+  align-items: center;
+
+  gap: 6px;
+
+  font-size: 16px;
+
+  cursor: pointer;
+}
+
+/* Radio button */
+
+.status-options input[type='radio'] {
+  width: auto;
+
+  height: auto;
+
+  margin: 0;
+
+  cursor: pointer;
+
+  accent-color: #4caf50;
+}
+
+/* =====================================================
+   SUBMIT BUTTON
+===================================================== */
+
+#submitBtn {
+  display: block;
+
+  width: 100%;
+
+  padding: 12px 20px;
+
+  font-size: 17px;
+
+  font-weight: bold;
+
+  background-color: #4caf50;
+
+  color: white;
+
+  border: none;
+
+  border-radius: 8px;
+
+  cursor: pointer;
+
+  transition: 0.2s;
+}
+
+#submitBtn:hover {
+  background-color: #43a047;
+}
+
+#submitBtn:active {
+  transform: scale(0.98);
+}
+
+/* =====================================================
+   TABLE
+===================================================== */
+
+#myTable {
+  width: 90%;
+
+  margin: 0 auto;
+
+  border-collapse: collapse;
+
+  background-color: white;
+
+  border: 2px solid #333;
+
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* =====================================================
+   TABLE HEADER
+===================================================== */
+
+#myTable th {
+  background-color: #333;
+
+  color: white;
+
+  padding: 15px;
+
+  border: 2px solid #222;
+
+  text-align: center;
+
+  font-size: 17px;
+
+  white-space: nowrap;
+}
+
+/* =====================================================
+   TABLE DATA
+===================================================== */
+
+#myTable td {
+  padding: 14px;
+
+  border: 2px solid #ccc;
+
+  text-align: center;
+
+  font-size: 16px;
+}
+
+/* =====================================================
+   ALTERNATING ROWS
+===================================================== */
+
+#myTable tbody tr:nth-child(even) {
+  background-color: #f5f5f5;
+}
+
+/* =====================================================
+   ROW HOVER
+===================================================== */
+
+#myTable tbody tr:hover {
+  background-color: #e8f5e9;
+}
+
+/* =====================================================
+   ACTION BUTTONS
+===================================================== */
+
+.action-buttons {
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  gap: 8px;
+}
+
+.action-buttons button {
+  padding: 8px 12px;
+
+  border: none;
+
+  border-radius: 6px;
+
+  color: white;
+
+  font-size: 13px;
+
+  font-weight: bold;
+
+  cursor: pointer;
+
+  transition: 0.2s;
+}
+
+/* =====================================================
+   EDIT BUTTON
+===================================================== */
+
+.edit-btn {
+  background-color: #2196f3;
+}
+
+.edit-btn:hover {
+  background-color: #1565c0;
+}
+
+/* =====================================================
+   DELETE BUTTON
+===================================================== */
+
+.delete-btn {
+  background-color: #e53935;
+}
+
+.delete-btn:hover {
+  background-color: #c62828;
+}
+
+/* =====================================================
+   COMPLETE BUTTON
+===================================================== */
+
+.complete-btn {
+  background-color: #4caf50;
+}
+
+.complete-btn:hover {
+  background-color: #388e3c;
+}
+
+/* =====================================================
+   COMPLETED ROW
+===================================================== */
+
+.completed {
+  background-color: #d9f2d9 !important;
+
+  opacity: 0.7;
+}
+
+.completed td {
+  text-decoration: line-through;
+}
+
+/* =====================================================
+   MOBILE RESPONSIVE
+===================================================== */
+
+@media (max-width: 700px) {
+  body {
+    padding: 15px;
+  }
+
+  h1 {
+    font-size: 28px;
+  }
+
+  #myForm {
+    width: 100%;
+
+    max-width: 100%;
+
+    padding: 20px;
+  }
+
+  #myTable {
+    width: 100%;
+
+    display: block;
+
+    overflow-x: auto;
+
+    white-space: nowrap;
+  }
+
+  #myTable th,
+  #myTable td {
+    padding: 10px 8px;
+  }
+
+  .action-buttons {
+    gap: 5px;
+  }
+
+  .action-buttons button {
+    padding: 7px 9px;
+
+    font-size: 12px;
+  }
+}

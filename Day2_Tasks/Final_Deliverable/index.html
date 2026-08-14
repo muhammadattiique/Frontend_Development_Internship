@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>TaskForge - Task Manager</title>
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div class="app">
+      <!-- HEADER -->
+      <header class="header">
+        <div class="brand">
+          <div class="logo">✓</div>
+
+          <div>
+            <h1>TaskForge</h1>
+            <p>Advanced Vanilla JavaScript Task Manager</p>
+          </div>
+        </div>
+
+        <div class="header-actions">
+          <button class="btn" id="demoBtn">Demo Data</button>
+
+          <button class="btn btn-primary" id="addTaskBtn">+ New Task</button>
+        </div>
+      </header>
+
+      <!-- STATISTICS -->
+      <section class="stats">
+        <div class="stat-card">
+          <strong id="totalTasks">0</strong>
+          <span>Total Tasks</span>
+        </div>
+
+        <div class="stat-card">
+          <strong id="openTasks">0</strong>
+          <span>Open Tasks</span>
+        </div>
+
+        <div class="stat-card">
+          <strong id="completedTasks">0</strong>
+          <span>Completed</span>
+        </div>
+
+        <div class="stat-card">
+          <strong id="completionRate">0%</strong>
+          <span>Completion Rate</span>
+        </div>
+      </section>
+
+      <!-- MAIN LAYOUT -->
+      <div class="layout">
+        <!-- TASK SECTION -->
+        <main class="panel">
+          <div class="toolbar">
+            <input
+              type="search"
+              id="searchInput"
+              class="field search-field"
+              placeholder="Search tasks, descriptions or tags..."
+            />
+
+            <select id="statusFilter" class="field">
+              <option value="all">All Status</option>
+              <option value="open">Open</option>
+              <option value="completed">Completed</option>
+            </select>
+
+            <select id="priorityFilter" class="field">
+              <option value="all">All Priority</option>
+              <option value="high">High</option>
+              <option value="medium">Medium</option>
+              <option value="low">Low</option>
+            </select>
+
+            <select id="sortSelect" class="field">
+              <option value="updated">Recently Updated</option>
+              <option value="due">Due Date</option>
+              <option value="priority">Priority</option>
+              <option value="title">Title</option>
+            </select>
+          </div>
+
+          <!-- TASK LIST -->
+          <div id="taskList" class="task-list"></div>
+        </main>
+
+        <!-- API PANEL -->
+        <aside class="panel api-panel">
+          <h2>API Panel</h2>
+
+          <div class="api-card">
+            <h3>JSONPlaceholder</h3>
+
+            <p>
+              Test GET and POST REST API requests. Imported tasks are saved
+              locally.
+            </p>
+          </div>
+
+          <div class="api-buttons">
+            <button id="getApiBtn" class="btn btn-primary">GET /todos</button>
+
+            <button id="postApiBtn" class="btn">POST Task</button>
+          </div>
+
+          <div id="apiResult" class="api-result">
+            API response will appear here.
+          </div>
+
+          <p class="api-note">
+            Local CRUD uses localStorage. API operations require an internet
+            connection.
+          </p>
+        </aside>
+      </div>
+    </div>
+
+    <!-- TASK MODAL -->
+    <div id="taskModal" class="modal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2 id="modalTitle">New Task</h2>
+
+          <button id="closeModalBtn" class="close-btn" type="button">×</button>
+        </div>
+
+        <form id="taskForm">
+          <div class="form-grid">
+            <!-- TITLE -->
+            <div class="form-group full-width">
+              <label for="taskTitle"> Task Title </label>
+
+              <input
+                id="taskTitle"
+                class="field"
+                type="text"
+                maxlength="120"
+                placeholder="Enter task title"
+                required
+              />
+            </div>
+
+            <!-- DESCRIPTION -->
+            <div class="form-group full-width">
+              <label for="taskDescription"> Description </label>
+
+              <textarea
+                id="taskDescription"
+                class="field"
+                rows="4"
+                maxlength="1000"
+                placeholder="Describe the task..."
+              ></textarea>
+            </div>
+
+            <!-- PRIORITY -->
+            <div class="form-group">
+              <label for="taskPriority"> Priority </label>
+
+              <select id="taskPriority" class="field">
+                <option value="high">High</option>
+
+                <option value="medium" selected>Medium</option>
+
+                <option value="low">Low</option>
+              </select>
+            </div>
+
+            <!-- DUE DATE -->
+            <div class="form-group">
+              <label for="taskDueDate"> Due Date </label>
+
+              <input id="taskDueDate" class="field" type="date" />
+            </div>
+
+            <!-- TAGS -->
+            <div class="form-group full-width">
+              <label for="taskTags"> Tags </label>
+
+              <input
+                id="taskTags"
+                class="field"
+                type="text"
+                placeholder="work, frontend, urgent"
+              />
+
+              <small> Separate tags with commas. </small>
+            </div>
+          </div>
+
+          <!-- FORM ACTIONS -->
+          <div class="modal-actions">
+            <button id="cancelBtn" class="btn" type="button">Cancel</button>
+
+            <button class="btn btn-primary" type="submit">Save Task</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <script src="main.js"></script>
+  </body>
+</html>
