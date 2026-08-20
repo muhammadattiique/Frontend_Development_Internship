@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>JSONPlaceholder API</title>
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <header>
+      <h1>Users From JSONPlaceholder</h1>
+    </header>
+
+    <main class="container">
+      <!-- Button -->
+      <button type="button" id="loadUsersBtn">Load Users</button>
+
+      <!-- Loading State -->
+      <p id="loading" class="state-message" hidden>Loading users...</p>
+
+      <!-- Empty State -->
+      <p id="empty" class="state-message" hidden>No users found.</p>
+
+      <!-- Error State -->
+      <p id="error" class="error-message" role="alert" hidden></p>
+
+      <!-- Success State -->
+      <p id="success" class="success-message" role="status" hidden></p>
+
+      <!-- Users Table -->
+      <table id="usersTable" hidden>
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Username</th>
+            <th>Email</th>
+          </tr>
+        </thead>
+
+        <tbody id="usersTableBody">
+          <!-- JavaScript will add users here -->
+        </tbody>
+      </table>
+    </main>
+
+    <script src="index.js"></script>
+  </body>
+</html>

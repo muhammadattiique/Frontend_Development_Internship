@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Task Manager</title>
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <!-- =========================
+       HEADER
+  ========================== -->
+
+    <header>
+      <h1>Task Manager</h1>
+
+      <button type="button" id="themeBtn">Toggle Theme</button>
+    </header>
+
+    <main>
+      <!-- =========================
+         TASK FORM
+    ========================== -->
+
+      <div class="container">
+        <form class="myForm" id="taskForm">
+          <!-- =========================
+             TASK TITLE
+        ========================== -->
+
+          <div class="form-group">
+            <label for="title"> Task Title </label>
+
+            <input
+              type="text"
+              id="title"
+              name="title"
+              placeholder="Enter Task Title"
+              aria-describedby="titleError"
+              aria-invalid="false"
+            />
+
+            <p id="titleError" class="error-message" role="alert" hidden></p>
+          </div>
+
+          <!-- =========================
+             PRIORITY
+        ========================== -->
+
+          <div class="form-group">
+            <label for="priority"> Priority </label>
+
+            <select
+              id="priority"
+              name="priority"
+              aria-describedby="priorityError"
+              aria-invalid="false"
+            >
+              <option value="">Select Priority</option>
+
+              <option value="low">Low</option>
+
+              <option value="medium">Medium</option>
+
+              <option value="high">High</option>
+            </select>
+
+            <p id="priorityError" class="error-message" role="alert" hidden></p>
+          </div>
+
+          <!-- =========================
+             DUE DATE
+        ========================== -->
+
+          <div class="form-group">
+            <label for="date"> Due Date </label>
+
+            <input
+              type="date"
+              id="date"
+              name="dueDate"
+              aria-describedby="dateError"
+              aria-invalid="false"
+            />
+
+            <p id="dateError" class="error-message" role="alert" hidden></p>
+          </div>
+
+          <!-- =========================
+             SUBMIT BUTTON
+        ========================== -->
+
+          <button type="submit" id="submitBtn">Add Task</button>
+        </form>
+      </div>
+
+      <!-- =========================
+         SUCCESS MESSAGE
+    ========================== -->
+
+      <p id="success" class="success-message" role="status" hidden></p>
+
+      <!-- =========================
+         SEARCH AND FILTER
+    ========================== -->
+
+      <section class="controls">
+        <!-- SEARCH -->
+
+        <div class="control-group">
+          <label for="search"> Search Tasks </label>
+
+          <input
+            type="search"
+            id="search"
+            placeholder="Search by task title..."
+          />
+        </div>
+
+        <!-- FILTER -->
+
+        <div class="control-group">
+          <label for="filter"> Filter by Priority </label>
+
+          <select id="filter">
+            <option value="all">All</option>
+
+            <option value="low">Low</option>
+
+            <option value="medium">Medium</option>
+
+            <option value="high">High</option>
+          </select>
+        </div>
+      </section>
+
+      <!-- =========================
+         TASK TABLE
+    ========================== -->
+
+      <table id="table" class="task-table" hidden>
+        <caption>
+          Submitted Tasks
+        </caption>
+
+        <thead>
+          <tr>
+            <th scope="col">Task Title</th>
+
+            <th scope="col">Priority</th>
+
+            <th scope="col">Due Date</th>
+          </tr>
+        </thead>
+
+        <tbody id="tableBody"></tbody>
+      </table>
+    </main>
+
+    <!-- =========================
+       JAVASCRIPT
+  ========================== -->
+
+    <script src="index.js"></script>
+  </body>
+</html>

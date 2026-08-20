@@ -1,0 +1,383 @@
+/* =========================
+   GLOBAL
+========================= */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+
+  font-family: Arial, sans-serif;
+
+  background-color: #f5f5f5;
+
+  color: #222;
+
+  transition:
+    background-color 0.3s,
+    color 0.3s;
+}
+
+/* =========================
+   HEADER
+========================= */
+
+header {
+  padding: 20px;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  gap: 20px;
+
+  flex-wrap: wrap;
+}
+
+header h1 {
+  margin: 0;
+
+  text-align: center;
+}
+
+/* =========================
+   MAIN CONTAINER
+========================= */
+
+.container {
+  width: 50vw;
+
+  min-height: 70vh;
+
+  margin: 5vh auto 0;
+
+  padding: 40px;
+
+  border: 2px solid black;
+
+  border-radius: 30px;
+
+  background-color: white;
+
+  transition: background-color 0.3s;
+}
+
+/* =========================
+   FORM
+========================= */
+
+.myForm {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 10px;
+}
+
+/* =========================
+   FORM GROUP
+========================= */
+
+.form-group {
+  display: flex;
+
+  flex-direction: column;
+
+  margin-bottom: 15px;
+}
+
+/* =========================
+   LABEL
+========================= */
+
+label {
+  margin-bottom: 8px;
+
+  font-weight: bold;
+}
+
+/* =========================
+   INPUT AND SELECT
+========================= */
+
+input,
+select {
+  width: 100%;
+
+  padding: 12px;
+
+  font-size: 16px;
+
+  border: 1px solid #777;
+
+  border-radius: 6px;
+
+  background-color: white;
+
+  color: #222;
+}
+
+/* =========================
+   FOCUS
+========================= */
+
+input:focus,
+select:focus,
+button:focus {
+  outline: 3px solid #bcdcff;
+
+  border-color: #0066cc;
+}
+
+/* =========================
+   INVALID FIELDS
+========================= */
+
+input[aria-invalid='true'],
+select[aria-invalid='true'] {
+  border: 2px solid #b00020;
+}
+
+/* =========================
+   ERROR MESSAGE
+========================= */
+
+.error-message {
+  margin: 5px 0 0;
+
+  font-size: 14px;
+
+  font-weight: bold;
+
+  color: #b00020;
+}
+
+/* =========================
+   BUTTON
+========================= */
+
+button {
+  padding: 12px 18px;
+
+  font-size: 16px;
+
+  font-weight: bold;
+
+  border: none;
+
+  border-radius: 6px;
+
+  cursor: pointer;
+
+  background-color: #0066cc;
+
+  color: white;
+}
+
+button:hover {
+  opacity: 0.85;
+}
+
+/* =========================
+   SUCCESS MESSAGE
+========================= */
+
+.success-message {
+  width: 50vw;
+
+  margin: 20px auto 0;
+
+  padding: 12px;
+
+  text-align: center;
+
+  font-weight: bold;
+
+  border: 1px solid #198754;
+
+  border-radius: 6px;
+
+  background-color: #e8f5e9;
+
+  color: #198754;
+}
+
+/* =========================
+   SEARCH & FILTER
+========================= */
+
+.controls {
+  width: 50vw;
+
+  margin: 25px auto;
+
+  display: flex;
+
+  gap: 20px;
+}
+
+.control-group {
+  flex: 1;
+
+  display: flex;
+
+  flex-direction: column;
+}
+
+/* =========================
+   TABLE
+========================= */
+
+.task-table {
+  width: 50vw;
+
+  margin: 20px auto;
+
+  border-collapse: collapse;
+
+  background-color: white;
+}
+
+/* =========================
+   TABLE CAPTION
+========================= */
+
+.task-table caption {
+  margin-bottom: 10px;
+
+  font-size: 20px;
+
+  font-weight: bold;
+}
+
+/* =========================
+   TABLE CELLS
+========================= */
+
+.task-table th,
+.task-table td {
+  padding: 12px;
+
+  text-align: left;
+
+  border: 1px solid #777;
+}
+
+/* =========================
+   TABLE HEADER
+========================= */
+
+.task-table th {
+  background-color: #eeeeee;
+
+  font-weight: bold;
+}
+
+/* =========================
+   TABLE HOVER
+========================= */
+
+.task-table tbody tr:hover {
+  background-color: #f5f5f5;
+}
+
+/* =========================
+   DARK THEME
+========================= */
+
+body.dark {
+  background-color: #222;
+
+  color: #fff;
+}
+
+/* Dark container */
+
+body.dark .container {
+  background-color: #333;
+
+  border-color: #fff;
+}
+
+/* Dark inputs */
+
+body.dark input,
+body.dark select {
+  background-color: #444;
+
+  color: #fff;
+
+  border-color: #aaa;
+}
+
+/* Dark table */
+
+body.dark .task-table {
+  background-color: #333;
+
+  color: #fff;
+}
+
+body.dark .task-table th {
+  background-color: #444;
+}
+
+body.dark .task-table th,
+body.dark .task-table td {
+  border-color: #aaa;
+}
+
+body.dark .task-table tbody tr:hover {
+  background-color: #555;
+}
+
+/* Dark success message */
+
+body.dark .success-message {
+  background-color: #1d3b26;
+
+  border-color: #4caf50;
+
+  color: #8ee99c;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 768px) {
+  .container {
+    width: 90vw;
+
+    padding: 25px;
+  }
+
+  .controls {
+    width: 90vw;
+
+    flex-direction: column;
+  }
+
+  .success-message {
+    width: 90vw;
+  }
+
+  .task-table {
+    width: 90vw;
+
+    font-size: 14px;
+  }
+
+  .task-table th,
+  .task-table td {
+    padding: 8px;
+  }
+
+  header h1 {
+    font-size: 24px;
+  }
+}
